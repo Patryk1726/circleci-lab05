@@ -13,10 +13,10 @@ jobs:
     steps:
       - checkout
       - python/install-packages:
-	  pkg-manager: pipenv
+          pkg-manager: pipenv
       - run:
-	  name: Run test
-	command: pipenv run python manage.py test
+          name: Run test
+          command: pipenv run python manage.py test
       - store_test_results:
           path: test-results
       - store_artifacts:
